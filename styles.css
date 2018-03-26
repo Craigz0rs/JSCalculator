@@ -1,0 +1,173 @@
+@font-face {
+  font-family: 'digital-7';
+  src: url('digital-7.ttf') format('truetype');
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: rgba(86,212,157,1);
+  background: -moz-linear-gradient(-45deg, rgba(86,212,157,1) 0%, rgba(86,175,226,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(86,212,157,1)), color-stop(100%, rgba(86,175,226,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(86,212,157,1) 0%, rgba(86,175,226,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(86,212,157,1) 0%, rgba(86,175,226,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(86,212,157,1) 0%, rgba(86,175,226,1) 100%);
+  background: linear-gradient(135deg, rgba(86,212,157,1) 0%, rgba(86,175,226,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#56d49d', endColorstr='#56afe2', GradientType=1 );
+}
+
+.calculator-wrapper {
+  margin: 0 auto;
+  margin-top: 3rem;
+  padding: 0 10px;
+  max-height: 500px;
+  max-width: 600px;
+}
+
+#display {
+  width: 100%;
+  height: 5rem;
+  margin: 0;
+  margin-bottom: 2.2rem;
+  text-align: right;
+  font-family: "digital-7";
+  font-size: 5rem;
+  color: white;
+}
+
+#display p {
+  padding: 0;
+  margin: 0;
+}
+
+.button-wrapper {
+  height: calc(100vw - 3rem);
+  max-height: 390px;
+  /* max-width: 500px; */
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "n7 n8 n9 onC onC"
+    "n4 n5 n6 multiply divide"
+    "n1 n2 n3 plus minus"
+    "n0 decimal neg equals equals";
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid #FFFFFF;
+  border-radius: 11px;
+  color: white;
+  font-family: 'Poiret One', cursive;
+  font-size: 2rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.1);
+  transition: 0.3s;
+}
+
+button:active {
+  transition: 0.2s;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.number:active,
+.clear:active,
+.negative:active,
+.decimal:active {
+  font-size: 1.9rem;
+}
+
+.operator {
+  font-size: 3rem;
+}
+
+.operator:active {
+  font-size: 2.7rem;
+}
+
+#n7 {
+  grid-area: n7;
+}
+
+#n8 {
+  grid-area: n8;
+}
+
+#n9 {
+  grid-area: n9;
+}
+
+#onC {
+  grid-area: onC;
+}
+
+#n4 {
+  grid-area: n4;
+}
+
+#n5 {
+  grid-area: n5;
+}
+
+#n6 {
+  grid-area: n6;
+}
+
+#multiply {
+  grid-area: multiply;
+  padding-bottom: 13px;
+  line-height: 20px;
+  font-size: 2.2rem;
+}
+
+#multiply:active {
+  font-size: 2rem;
+}
+
+#divide {
+  grid-area: divide;
+}
+
+#n1 {
+  grid-area: n1;
+}
+
+#n2 {
+  grid-area: n2;
+}
+
+#n3 {
+  grid-area: n3;
+}
+
+#plus {
+  grid-area: plus;
+}
+
+#minus {
+  grid-area: minus;
+}
+
+#n0 {
+  grid-area: n0;
+}
+
+#decimal {
+  grid-area: decimal;
+}
+
+#negative {
+  grid-area: neg;
+  font-size: 1.8rem;
+}
+
+#equals {
+  grid-area: equals;
+}
